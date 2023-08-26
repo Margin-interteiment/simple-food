@@ -25,13 +25,16 @@
   &__list-link {
     color: $dark;
     transition: all 0.3s;
+    @extend %quicksand-400;
 
     &:hover {
       color: $orange-900;
+       @extend %quicksand-400;
     }
   }
   &__list-link--active {
     color: $orange-900;
+     @extend %quicksand-400;
   }
 }
 

@@ -1,5 +1,5 @@
 const { src, dest, watch, parallel, series } = require('gulp');
-const svgSprite = require("gulp-svg-sprite");
+// const svgSprite = require("gulp-svg-sprite");
 const scss = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
@@ -10,19 +10,19 @@ const browserSync = require('browser-sync').create();
 
 
 
-function svgSprites() {
-  return src("app/images/icons/*.svg") // выбираем в папке с иконками все файлы с расширением svg
-    .pipe(
-      svgSprite({
-        mode: {
-          stack: {
-            sprite: "../sprites.svg", // указываем имя файла спрайта и путь
-          },
-        },
-      })
-    )
-    .pipe(dest("app/images/icons-svg")); // указываем, в какую папку поместить готовый файл спрайта
-}
+// function svgSprites() {
+//   return src("app/images/icons/*.svg") // выбираем в папке с иконками все файлы с расширением svg
+//     .pipe(
+//       svgSprite({
+//         mode: {
+//           stack: {
+//             sprite: "../sprites.svg", // указываем имя файла спрайта и путь
+//           },
+//         },
+//       })
+//     )
+//     .pipe(dest("app/images/icons-svg")); // указываем, в какую папку поместить готовый файл спрайта
+// }
 
 
 
@@ -104,7 +104,7 @@ function cleanDist(){
 
 function watching(){
 watch(['app/scss/**/*.scss'],styles);
-watch(["app/images/icons-svg/*.svg"], svgSprites);
+// watch(["app/images/icons-svg/*.svg"], svgSprites);
 watch(['app/js/**/*.js', '!app/js/main.min.js'],scripts);
 watch(['app/**/*.html']).on('change', browserSync.reload);
 }
@@ -117,7 +117,7 @@ exports.scripts = scripts;
 exports.browsersync = browsersync;
 exports.images = images;
 exports.cleanDist = cleanDist;
- exports.svgSprites = svgSprites;
+//  exports.svgSprites = svgSprites;
 exports.build = series(cleanDist, images, build);
-exports.default = parallel(svgSprites, styles, scripts, browsersync, watching);
+exports.default = parallel( styles, scripts, browsersync, watching);
 

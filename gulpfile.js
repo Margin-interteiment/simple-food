@@ -1,28 +1,28 @@
 const { src, dest, watch, parallel, series } = require('gulp');
+const svgSprite = require("gulp-svg-sprite");
 const scss = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
 const del = require('del');
-// const svgSprite = require("gulp-svg-sprite");
 const browserSync = require('browser-sync').create();
 
 
 
-// function svgSprites() {
-//   return src("app/images/icons/*.svg") // выбираем в папке с иконками все файлы с расширением svg
-//     .pipe(
-//       svgSprite({
-//         mode: {
-//           stack: {
-//             sprite: "../sprite.svg", // указываем имя файла спрайта и путь
-//           },
-//         },
-//       })
-//     )
-//     .pipe(dest("app/images")); // указываем, в какую папку поместить готовый файл спрайта
-// }
+function svgSprites() {
+  return src("app/images/icons/*.svg") // выбираем в папке с иконками все файлы с расширением svg
+    .pipe(
+      svgSprite({
+        mode: {
+          stack: {
+            sprite: "../sprites.svg", // указываем имя файла спрайта и путь
+          },
+        },
+      })
+    )
+    .pipe(dest("app/images/icons-svg")); // указываем, в какую папку поместить готовый файл спрайта
+}
 
 
 
@@ -60,6 +60,7 @@ function browsersync(){
   return src([
     "node_modules/jquery/dist/jquery.js", 
     "node_modules/mixitup/dist/mixitup.js",
+    "node_modules/slick-carousel/slick/slick.js",
     "app/js/main.js"
   ])
     .pipe(concat("main.min.js"))
@@ -103,7 +104,7 @@ function cleanDist(){
 
 function watching(){
 watch(['app/scss/**/*.scss'],styles);
-// watch(["app/images/icons/*.svg"], svgSprites);
+watch(["app/images/icons-svg/*.svg"], svgSprites);
 watch(['app/js/**/*.js', '!app/js/main.min.js'],scripts);
 watch(['app/**/*.html']).on('change', browserSync.reload);
 }
@@ -116,15 +117,7 @@ exports.scripts = scripts;
 exports.browsersync = browsersync;
 exports.images = images;
 exports.cleanDist = cleanDist;
+ exports.svgSprites = svgSprites;
 exports.build = series(cleanDist, images, build);
-//  exports.svgSprites = svgSprites;
-//  exports.default = parallel(
-//    svgSprites,
-//    styles,
-//    fileincludes,
-//    scripts,
-//    browserSync,
-//    watching
-//  );
-exports.default = parallel(styles, scripts, browsersync, watching);
+exports.default = parallel(svgSprites, styles, scripts, browsersync, watching);
 

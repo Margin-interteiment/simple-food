@@ -30,3 +30,15 @@
   url("../fonts/Rubik-Medium.woff2") format("woff2"),
   url("../fonts/Rubik-Medium.woff") format("woff");
 }
+
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+   src: 
+  // local("Rubik-Medium"), 
+  url("../fonts/Roboto-Italic.woff2") format("woff2"),
+  url("../fonts/Roboto-Italic.woff") format("woff");
+}

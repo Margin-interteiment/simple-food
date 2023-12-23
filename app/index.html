@@ -28,18 +28,22 @@
       href="favicons/safari-pinned-tab.svg"
       color="#5bbad5"
     />
+    
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
 
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body id="body">
-    <header class="header">
+
+
+    <header class="header section">
+      <div class="header__inner">
       <div class="container">
-        <div class="header__inner header__i">
+        
           <nav class="header__menu">
             <a class="logo header__logo animation-logo" href="#body">
-              <img class="logo__img" src="images/logo.svg" alt="logo" />
+              <img class="logo" src="images/logo.svg" alt="логотип" width="200" height="39" />
             </a>
 
             <ul class="menu header__list">
@@ -65,7 +69,7 @@
 
             <ul class="user-nav">
               <li class="user-nav__list">
-                <button class="user-nav__link user-link user-nav__l" href="#">
+                <button class="user-nav__link user-link user-l" type="button">
                   <span class="sr-only">кнопка поиска</span>
                   <svg
                     width="21"
@@ -95,7 +99,7 @@
                 </button>
               </li>
               <li class="user-nav__list">
-                <button class="user-nav__link user-nav__l user-link" href="#">
+                <button class="user-nav__link user-nav__l user-link" type="button">
                   <span class="sr-only">корзина</span>
                   <svg
                     width="21"
@@ -146,29 +150,30 @@
       </div>
     </header>
 
+
+    <main class="main section">
     <section class="hero">
       <div class="container">
-        <div class="content content__info">
-          <div class="content__list">
-            <h2 class="contents__content-title">
+        <div class="hero">
+          <h1 class="sr-only">информация о доставке</h1>
+          <div class="content__inner">
+            <h2 class="hero__content-title">
               Доставка
               <span>за 15 минут</span>
             </h2>
 
-            <p class="contents__content__text">
+            <p class="hero__text">
               Самый быстрый сервис доставки еды в вашем городе. Не уложимся в
               срок - доставка за наш счёт
             </p>
 
-            <a class="contents__content-button animation-btn" type="button">
-              <span class="contents__content-btn-link header__link" href="#">
+            <a class="hero__content-button animation-btn" href="#">
                 Заказать
-              </span>
-              <span class="sr-only">кнопка</span>
+             
             </a>
             <a class="contents__content-link animation" href="#">
               Подробнее
-              <span class="sr-only">ccылка</span>
+              
             </a>
           </div>
 
@@ -182,14 +187,14 @@
       </div>
     </section>
 
-    <main class="main">
+    
       <section class="popular__category" id="category">
         <div class="container">
           <h2 class="category__title title">Популярные категории</h2>
 
-          <ul class="category__item">
-            <li class="category__item-list">
-              <button class="category__item-btn" data-filter="all">
+          <ul class="category-item">
+            <li class="category-item__list">
+              <button class="category-item__btn" data-filter="all">
                 <svg
                   width="44"
                   height="44"
@@ -230,8 +235,8 @@
               </button>
             </li>
 
-            <li class="category__item-list">
-              <button class="category__item-btn" data-filter=".category-a">
+            <li class="category-item__list">
+              <button class="category-item__btn" data-filter=".category-a">
                 <svg
                   width="45"
                   height="44"
@@ -285,8 +290,8 @@
               </button>
             </li>
 
-            <li class="category__item-list">
-              <button class="category__item-btn" data-filter=".category-b">
+            <li class="category-item__list">
+              <button class="category-item__btn" data-filter=".category-b">
                 <svg
                   width="44"
                   height="44"
@@ -339,8 +344,8 @@
               </button>
             </li>
 
-            <li class="category__item-list">
-              <button class="category__item-btn" data-filter=".category-c">
+            <li class="category-item__list">
+              <button class="category-item__btn" data-filter=".category-c">
                 <svg
                   width="44"
                   height="44"
@@ -393,8 +398,8 @@
               </button>
             </li>
 
-            <li class="category__item-list">
-              <button class="category__item-btn" data-filter=".category-d">
+            <li class="category-item__list">
+              <button class="category-item__btn" data-filter=".category-d">
                 <svg
                   width="44"
                   height="44"
@@ -462,14 +467,16 @@
                 <img
                   class="product-card-img"
                   src="images/burger-1.png"
+                  width="140" 
+                  height="140" 
                   alt="фото Бургера"
                 />
                 <h3 class="product-card-subtitle">
                   Чизбургер с листьями салата
                 </h3>
-                <span>160 грн.</span>
+                <span class="product__span">160  <span>грн.</span></span>
                 <button class="product-card-btn animation-btn">
-                  <span>В корзину </span>
+                 В корзину 
                 </button>
               </article>
             </li>
@@ -484,9 +491,9 @@
                   alt="фото Бургера"
                 />
                 <h3 class="product-card-subtitle">Бифбургер</h3>
-                <span>190 грн.</span>
+                <span class="product__span">190 <span>грн.</span> </span>
                 <button class="product-card-btn animation-btn">
-                  <span>В корзину </span>
+                В корзину 
                 </button>
               </article>
             </li>
@@ -501,9 +508,9 @@
                   alt="фото Бургера"
                 />
                 <h3 class="product-card-subtitle">Королевский чизбургер</h3>
-                <span>260 грн.</span>
+                <span class="product__span">260 <span>грн.</span> </span>
                 <button class="product-card-btn animation-btn">
-                  <span>В корзину </span>
+                  В корзину 
                 </button>
               </article>
             </li>
@@ -518,9 +525,9 @@
                   alt="фото Бургера"
                 />
                 <h3 class="product-card-subtitle">Черный гамбургер</h3>
-                <span>199 грн.</span>
+                <span class="product__span">199 <span>грн.</span> </span>
                 <button class="product-card-btn animation-btn">
-                  <span>В корзину </span>
+                В корзину 
                 </button>
               </article>
             </li>
@@ -535,9 +542,9 @@
                   alt="фото Бургера"
                 />
                 <h3 class="product-card-subtitle">Чикен бургер</h3>
-                <span>180 грн.</span>
+                <span class="product__span">180  <span>грн.</span></span>
                 <button class="product-card-btn animation-btn">
-                  <span>В корзину </span>
+               В корзину 
                 </button>
               </article>
             </li>
@@ -554,9 +561,9 @@
                 <h3 class="product-card-subtitle">
                   Чизбургер с листьями салата
                 </h3>
-                <span>160 грн.</span>
+                <span class="product__span">160  <span>грн.</span></span>
                 <button class="product-card-btn animation-btn">
-                  <span>В корзину </span>
+              В корзину
                 </button>
               </article>
             </li>
@@ -571,9 +578,9 @@
                   alt="фото Бургера"
                 />
                 <h3 class="product-card-subtitle">Бифбургер</h3>
-                <span>190 грн.</span>
+                <span class="product__span">190 <span>грн.</span> </span>
                 <button class="product-card-btn animation-btn">
-                  <span>В корзину </span>
+              В корзину 
                 </button>
               </article>
             </li>
@@ -588,9 +595,9 @@
                   alt="фото Бургера"
                 />
                 <h3 class="product-card-subtitle">Королевский чизбургер</h3>
-                <span>260 грн.</span>
+                <span class="product__span">260 <span>грн.</span> </span>
                 <button class="product-card-btn animation-btn">
-                  <span>В корзину </span>
+                В корзину 
                 </button>
               </article>
             </li>
@@ -605,9 +612,9 @@
                   alt="фото Бургера"
                 />
                 <h3 class="product-card-subtitle">Черный гамбургер</h3>
-                <span>199 грн.</span>
+                <span class="product__span">199 <span>грн.</span> </span>
                 <button class="product-card-btn animation-btn">
-                  <span>В корзину </span>
+                  В корзину
                 </button>
               </article>
             </li>
@@ -622,10 +629,10 @@
                   alt="фото Бургера"
                 />
                 <h3 class="product-card-subtitle">Чикен бургер</h3>
-                <span>180 грн.</span>
-                <button class="product-card-btn animation-btn">
-                  <span>В корзину </span>
-                </button>
+                <span class="product__span">180  <span>грн.</span></span>
+                <a class="product-card-btn animation-btn">
+                В корзину 
+                </a>
               </article>
             </li>
           </ul>
@@ -633,7 +640,7 @@
         </div>
       </section>
 
-      <section class="delivery">
+      <section class="delivery section">
         <div class="container">
           <div class="delivery__inner">
             <div
@@ -645,7 +652,8 @@
 
             <div class="delivery__content">
               <h2 class="delivery__title title">
-                Оставайтесь дома, а мы позаботимся о еде
+                Оставайтесь дома, <br>
+                а мы позаботимся о еде
               </h2>
               <p class="delivery__text">
                 У нас есть вкусная еда и мы готовы доставить её к вам домой!
@@ -670,26 +678,31 @@
         </div>
       </section>
 
-      <section class="restaurant">
+      <section class="restaurant section">
         <div class="container">
           <div class="restaurant__inner">
             <h2 class="restaurant__title title">Лучшие рестораны</h2>
 
             <ul class="restaurant__item">
               <li class="restaurant__list">
-                <article class="card-food">
+                <article class="card-restaurant">
                   <img
-                    class="card-food__img"
-                    src="images/1.jpg"
+                    class="card-restaurant__img"
+                    src="images/eat-1.jpg"
                     alt="фото пиццы"
+                    width="370"
+                    height="300" 
                   />
 
-                  <div class="card-food-content">
-                    <h5 class="card__title title">
+                  <div class="card-food__content">
+                    <h3 class="card__title">
                       Blaze Pizza
-                      <span class="card__span"> 11:00 - 22:00 </span>
-                    </h5>
+                      
+                    </h3>
 
+
+                     <div class="card__content">
+                      <p class="card__text"> 11:00 - 22:00 </p>
                     <a class="card__link animation-btn" href="#">
                       <svg
                         width="24"
@@ -697,31 +710,37 @@
                         viewBox="0 0 24 24"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
+                       
                       >
                         <path
                           d="M13.121 6.293C12.9335 6.48053 12.8282 6.73484 12.8282 7C12.8282 7.26516 12.9335 7.51947 13.121 7.707L16.413 11L6 11.007C5.73478 11.007 5.48043 11.1124 5.29289 11.2999C5.10536 11.4874 5 11.7418 5 12.007C5 12.2722 5.10536 12.5266 5.29289 12.7141C5.48043 12.9016 5.73478 13.007 6 13.007L16.414 13L13.121 16.293C13.0255 16.3852 12.9493 16.4956 12.8969 16.6176C12.8445 16.7396 12.8169 16.8708 12.8157 17.0036C12.8146 17.1364 12.8399 17.2681 12.8902 17.391C12.9405 17.5138 13.0147 17.6255 13.1086 17.7194C13.2025 17.8133 13.3141 17.8875 13.437 17.9378C13.5599 17.9881 13.6916 18.0134 13.8244 18.0123C13.9572 18.0111 14.0884 17.9835 14.2104 17.9311C14.3324 17.8787 14.4428 17.8025 14.535 17.707L18.121 14.122C18.3996 13.8434 18.6207 13.5127 18.7715 13.1487C18.9222 12.7847 18.9999 12.3945 18.9999 12.0005C18.9999 11.6065 18.9222 11.2163 18.7715 10.8523C18.6207 10.4883 18.3996 10.1576 18.121 9.879L14.535 6.293C14.3475 6.10553 14.0932 6.00021 13.828 6.00021C13.5628 6.00021 13.3085 6.10553 13.121 6.293Z"
                           fill="white"
                         />
+                        <span class="sr-only">кнопка</span>
                       </svg>
                     </a>
+                    </div>
                   </div>
                 </article>
               </li>
 
               <li class="restaurant__list">
-                <article class="card-food">
+                <article class="card-restaurant">
                   <img
-                    class="card-food__img"
-                    src="images/2.jpg"
+                    class="card-restaurant__img"
+                    src="images/eat-2.jpg"
                     alt="фото пиццы"
+                    width=" 370"
+                    height="300"
                   />
 
-                  <div class="card-food-content">
-                    <h5 class="card__title title">
+                  <div class="card-food__content">
+                    <h3 class="card__title">
                       Pizza Runcho
-                      <span class="card__span"> 12:00 - 21:00 </span>
-                    </h5>
+                    </h3>
 
+                    <div class="card__content">
+                      <p class="card__text"> 12:00 - 21:00 </p>
                     <a class="card__link animation-btn" href="#">
                       <svg
                         width="24"
@@ -734,25 +753,31 @@
                           d="M13.121 6.293C12.9335 6.48053 12.8282 6.73484 12.8282 7C12.8282 7.26516 12.9335 7.51947 13.121 7.707L16.413 11L6 11.007C5.73478 11.007 5.48043 11.1124 5.29289 11.2999C5.10536 11.4874 5 11.7418 5 12.007C5 12.2722 5.10536 12.5266 5.29289 12.7141C5.48043 12.9016 5.73478 13.007 6 13.007L16.414 13L13.121 16.293C13.0255 16.3852 12.9493 16.4956 12.8969 16.6176C12.8445 16.7396 12.8169 16.8708 12.8157 17.0036C12.8146 17.1364 12.8399 17.2681 12.8902 17.391C12.9405 17.5138 13.0147 17.6255 13.1086 17.7194C13.2025 17.8133 13.3141 17.8875 13.437 17.9378C13.5599 17.9881 13.6916 18.0134 13.8244 18.0123C13.9572 18.0111 14.0884 17.9835 14.2104 17.9311C14.3324 17.8787 14.4428 17.8025 14.535 17.707L18.121 14.122C18.3996 13.8434 18.6207 13.5127 18.7715 13.1487C18.9222 12.7847 18.9999 12.3945 18.9999 12.0005C18.9999 11.6065 18.9222 11.2163 18.7715 10.8523C18.6207 10.4883 18.3996 10.1576 18.121 9.879L14.535 6.293C14.3475 6.10553 14.0932 6.00021 13.828 6.00021C13.5628 6.00021 13.3085 6.10553 13.121 6.293Z"
                           fill="white"
                         />
+                         <span class="sr-only">кнопка</span>
                       </svg>
                     </a>
+                    </div>
                   </div>
                 </article>
               </li>
+
               <li class="restaurant__list">
-                <article class="card-food">
+                <article class="card-restaurant">
                   <img
-                    class="card-food__img"
-                    src="images/3.jpg"
+                    class="card-restaurant__img"
+                    src="images/eat-3.jpg"
                     alt="фото пиццы"
+                    width=" 370"
+                    height="300"
                   />
 
-                  <div class="card-food-content">
-                    <h5 class="card__title title">
+                  <div class="card-food__content">
+                    <h3 class="card__title">
                       Pizza Hut
-                      <span class="card__span"> 11:00 - 22:00 </span>
-                    </h5>
+                    </h3>
 
+                    <div class="card__content">
+                      <p class="card__text"> 11:00 - 22:00 </p>
                     <a class="card__link animation-btn" href="#">
                       <svg
                         width="24"
@@ -765,25 +790,31 @@
                           d="M13.121 6.293C12.9335 6.48053 12.8282 6.73484 12.8282 7C12.8282 7.26516 12.9335 7.51947 13.121 7.707L16.413 11L6 11.007C5.73478 11.007 5.48043 11.1124 5.29289 11.2999C5.10536 11.4874 5 11.7418 5 12.007C5 12.2722 5.10536 12.5266 5.29289 12.7141C5.48043 12.9016 5.73478 13.007 6 13.007L16.414 13L13.121 16.293C13.0255 16.3852 12.9493 16.4956 12.8969 16.6176C12.8445 16.7396 12.8169 16.8708 12.8157 17.0036C12.8146 17.1364 12.8399 17.2681 12.8902 17.391C12.9405 17.5138 13.0147 17.6255 13.1086 17.7194C13.2025 17.8133 13.3141 17.8875 13.437 17.9378C13.5599 17.9881 13.6916 18.0134 13.8244 18.0123C13.9572 18.0111 14.0884 17.9835 14.2104 17.9311C14.3324 17.8787 14.4428 17.8025 14.535 17.707L18.121 14.122C18.3996 13.8434 18.6207 13.5127 18.7715 13.1487C18.9222 12.7847 18.9999 12.3945 18.9999 12.0005C18.9999 11.6065 18.9222 11.2163 18.7715 10.8523C18.6207 10.4883 18.3996 10.1576 18.121 9.879L14.535 6.293C14.3475 6.10553 14.0932 6.00021 13.828 6.00021C13.5628 6.00021 13.3085 6.10553 13.121 6.293Z"
                           fill="white"
                         />
+                         <span class="sr-only">кнопка</span>
                       </svg>
                     </a>
+                    </div>
                   </div>
                 </article>
               </li>
               <li class="restaurant__list">
-                <article class="card-food">
+                <article class="card-restaurant">
                   <img
-                    class="card-food__img"
-                    src="images/4.jpg"
+                    class="card-restaurant__img"
+                    src="images/eat-4.jpg"
                     alt="фото пиццы"
+                    width="370"
+                    height="300"
                   />
 
-                  <div class="card-food-content">
-                    <h5 class="card__title title">
+                  <div class="card-food__content">
+                    <h3 class="card__title">
                       McDonald`s
-                      <span class="card__span"> 06:00 - 23:00 </span>
-                    </h5>
+                      
+                    </h3>
 
+                    <div class="card__content">
+                      <p class="card__text"> 06:00 - 23:00 </p>
                     <a class="card__link animation-btn" href="#">
                       <svg
                         width="24"
@@ -796,25 +827,31 @@
                           d="M13.121 6.293C12.9335 6.48053 12.8282 6.73484 12.8282 7C12.8282 7.26516 12.9335 7.51947 13.121 7.707L16.413 11L6 11.007C5.73478 11.007 5.48043 11.1124 5.29289 11.2999C5.10536 11.4874 5 11.7418 5 12.007C5 12.2722 5.10536 12.5266 5.29289 12.7141C5.48043 12.9016 5.73478 13.007 6 13.007L16.414 13L13.121 16.293C13.0255 16.3852 12.9493 16.4956 12.8969 16.6176C12.8445 16.7396 12.8169 16.8708 12.8157 17.0036C12.8146 17.1364 12.8399 17.2681 12.8902 17.391C12.9405 17.5138 13.0147 17.6255 13.1086 17.7194C13.2025 17.8133 13.3141 17.8875 13.437 17.9378C13.5599 17.9881 13.6916 18.0134 13.8244 18.0123C13.9572 18.0111 14.0884 17.9835 14.2104 17.9311C14.3324 17.8787 14.4428 17.8025 14.535 17.707L18.121 14.122C18.3996 13.8434 18.6207 13.5127 18.7715 13.1487C18.9222 12.7847 18.9999 12.3945 18.9999 12.0005C18.9999 11.6065 18.9222 11.2163 18.7715 10.8523C18.6207 10.4883 18.3996 10.1576 18.121 9.879L14.535 6.293C14.3475 6.10553 14.0932 6.00021 13.828 6.00021C13.5628 6.00021 13.3085 6.10553 13.121 6.293Z"
                           fill="white"
                         />
+                         <span class="sr-only">кнопка</span>
                       </svg>
                     </a>
+                    </div>
                   </div>
                 </article>
               </li>
               <li class="restaurant__list">
-                <article class="card-food">
+                <article class="card-restaurant">
                   <img
-                    class="card-food__img"
-                    src="images/5.jpg"
+                    class="card-restaurant__img"
+                    src="images/eat-5.jpg"
                     alt="фото пиццы"
+                    width="370"
+                    height="300"
                   />
 
-                  <div class="card-food-content">
-                    <h5 class="card__title title">
+                  <div class="card-food__content">
+                    <h3 class="card__title">
                       KFC
-                      <span class="card__span"> 06:00 - 23:30 </span>
-                    </h5>
+                    
+                    </h3>
 
+                    <div class="card__content">
+                      <p class="card__text"> 06:00 - 23:30 </p>
                     <a class="card__link animation-btn" href="#">
                       <svg
                         width="24"
@@ -827,25 +864,31 @@
                           d="M13.121 6.293C12.9335 6.48053 12.8282 6.73484 12.8282 7C12.8282 7.26516 12.9335 7.51947 13.121 7.707L16.413 11L6 11.007C5.73478 11.007 5.48043 11.1124 5.29289 11.2999C5.10536 11.4874 5 11.7418 5 12.007C5 12.2722 5.10536 12.5266 5.29289 12.7141C5.48043 12.9016 5.73478 13.007 6 13.007L16.414 13L13.121 16.293C13.0255 16.3852 12.9493 16.4956 12.8969 16.6176C12.8445 16.7396 12.8169 16.8708 12.8157 17.0036C12.8146 17.1364 12.8399 17.2681 12.8902 17.391C12.9405 17.5138 13.0147 17.6255 13.1086 17.7194C13.2025 17.8133 13.3141 17.8875 13.437 17.9378C13.5599 17.9881 13.6916 18.0134 13.8244 18.0123C13.9572 18.0111 14.0884 17.9835 14.2104 17.9311C14.3324 17.8787 14.4428 17.8025 14.535 17.707L18.121 14.122C18.3996 13.8434 18.6207 13.5127 18.7715 13.1487C18.9222 12.7847 18.9999 12.3945 18.9999 12.0005C18.9999 11.6065 18.9222 11.2163 18.7715 10.8523C18.6207 10.4883 18.3996 10.1576 18.121 9.879L14.535 6.293C14.3475 6.10553 14.0932 6.00021 13.828 6.00021C13.5628 6.00021 13.3085 6.10553 13.121 6.293Z"
                           fill="white"
                         />
+                         <span class="sr-only">кнопка</span>
                       </svg>
                     </a>
+                    </div>
                   </div>
                 </article>
               </li>
               <li class="restaurant__list">
-                <article class="card-food">
+                <article class="card-restaurant">
                   <img
-                    class="card-food__img"
-                    src="images/6.jpg"
+                    class="card-restaurant__img"
+                    src="images/eat-6.jpg"
                     alt="фото пиццы"
+                    width=" 370"
+                    height="300"
                   />
 
-                  <div class="card-food-content">
-                    <h5 class="card__title title">
+                  <div class="card-food__content">
+                    <h3 class="card__title">
                       Star Burgers
-                      <span class="card__span"> 09:00 - 21:00 </span>
-                    </h5>
+                     
+                    </h3>
 
+                    <div class="card__content">
+                      <p class="card__text"> 09:00 - 21:00 </p>
                     <a class="card__link animation-btn" href="#">
                       <svg
                         width="24"
@@ -858,8 +901,10 @@
                           d="M13.121 6.293C12.9335 6.48053 12.8282 6.73484 12.8282 7C12.8282 7.26516 12.9335 7.51947 13.121 7.707L16.413 11L6 11.007C5.73478 11.007 5.48043 11.1124 5.29289 11.2999C5.10536 11.4874 5 11.7418 5 12.007C5 12.2722 5.10536 12.5266 5.29289 12.7141C5.48043 12.9016 5.73478 13.007 6 13.007L16.414 13L13.121 16.293C13.0255 16.3852 12.9493 16.4956 12.8969 16.6176C12.8445 16.7396 12.8169 16.8708 12.8157 17.0036C12.8146 17.1364 12.8399 17.2681 12.8902 17.391C12.9405 17.5138 13.0147 17.6255 13.1086 17.7194C13.2025 17.8133 13.3141 17.8875 13.437 17.9378C13.5599 17.9881 13.6916 18.0134 13.8244 18.0123C13.9572 18.0111 14.0884 17.9835 14.2104 17.9311C14.3324 17.8787 14.4428 17.8025 14.535 17.707L18.121 14.122C18.3996 13.8434 18.6207 13.5127 18.7715 13.1487C18.9222 12.7847 18.9999 12.3945 18.9999 12.0005C18.9999 11.6065 18.9222 11.2163 18.7715 10.8523C18.6207 10.4883 18.3996 10.1576 18.121 9.879L14.535 6.293C14.3475 6.10553 14.0932 6.00021 13.828 6.00021C13.5628 6.00021 13.3085 6.10553 13.121 6.293Z"
                           fill="white"
                         />
+                         <span class="sr-only">кнопка</span>
                       </svg>
                     </a>
+                    </div>
                   </div>
                 </article>
               </li>
@@ -870,108 +915,167 @@
 
       <section class="reviews">
         <div class="container">
-          <div class="reviews__inner">
+          <!-- <div class="reviews__inner"> -->
             <h2 class="reviews__title title">Отзывы клиентов</h2>
 
             <div class="reviews__slider">
-              <div class="reviews__item">
-                <div class="reviews__content">
-                <img class="reviews__img" src="images/d.jpg" alt="фото Дарьи" />
+              <ul class="reviews__item">
+               <li class="reviews__list">
+               <figure class="reviews__content">
+                  <img
+                    class="reviews__img"
+                    src="images/d.jpg"
+                    alt="фото Дарьи"
+                    
+                  />
 
-                <blockquote class="blockquote">
-                  SimpleFood - одна из лучших служб доставки продуктов из
-                  ресторанов в городе. Очень удобный сайт и приложение. Их
-                  доставщики очень вежливы и пунктуальны. Компания часто
-                  проводит акции и дарит скидки на доставку - однозначно
-                  рекомендую!
+                  <blockquote class="blockquote">
+                   <p class="blockquote__text"> SimpleFood - одна из лучших служб доставки продуктов из
+                    ресторанов в городе. Очень удобный сайт и приложение. Их
+                    доставщики очень вежливы и пунктуальны. Компания часто
+                    проводит акции и дарит скидки на доставку - однозначно
+                    рекомендую!</p>
 
-                  <span>Дарья</span>
-                  <p>Ценитель вкусной еды</p>
-                </blockquote>
-                </div>
-              </div>
+                    
 
-              <div class="reviews__item">
-                <div class="reviews__content">
-                <img class="reviews__img" src="images/d.jpg" alt="фото Дарьи" />
+                    
+                  </blockquote>
+                     <figcaption>
+                    Дарья
+                  <p>Ценитель вкусной еды</p> 
+                </figcaption>
+                  
+                </figure>
+                </li>
+              </ul>
 
-                <blockquote class="blockquote">
-                  SimpleFood - одна из лучших служб доставки продуктов из
-                  ресторанов в городе. Очень удобный сайт и приложение. Их
-                  доставщики очень вежливы и пунктуальны. Компания часто
-                  проводит акции и дарит скидки на доставку - однозначно
-                  рекомендую!
+              <ul class="reviews__item">
+                <li class="reviews__list">
+                <figure class="reviews__content">
+                  <img
+                    class="reviews__img"
+                    src="images/d.jpg"
+                    alt="фото Дарьи"
+                    width="300"
+                    height="300"
+                  />
 
-                  <span>Дарья</span>
-                  <p>Ценитель вкусной еды</p>
-                </blockquote>
-                </div>
-              </div>
-              <div class="reviews__item">
-                <div class="reviews__content">
-                <img class="reviews__img" src="images/d.jpg" alt="фото Дарьи" />
+                  <blockquote class="blockquote">
+                    <p class="blockquote__text"> SimpleFood - одна из лучших служб доставки продуктов из
+                    ресторанов в городе. Очень удобный сайт и приложение. Их
+                    доставщики очень вежливы и пунктуальны. Компания часто
+                    проводит акции и дарит скидки на доставку - однозначно
+                    рекомендую!</p>
+                    
+                  </blockquote>
+                  <figcaption>
+                    Дарья
+                  <p>Ценитель вкусной еды</p> 
+                </figcaption>
+                </figure>
+                </li>
+              </ul>
 
-                <blockquote class="blockquote">
-                  SimpleFood - одна из лучших служб доставки продуктов из
-                  ресторанов в городе. Очень удобный сайт и приложение. Их
-                  доставщики очень вежливы и пунктуальны. Компания часто
-                  проводит акции и дарит скидки на доставку - однозначно
-                  рекомендую!
 
-                  <span>Дарья</span>
-                  <p>Ценитель вкусной еды</p>
-                </blockquote>
-                </div>
-              </div>
-              <div class="reviews__item">
-                <div class="reviews__content">
-                <img class="reviews__img" src="images/d.jpg" alt="фото Дарьи" />
+              <ul class="reviews__item">
+                <li class="reviews__list">
 
-                <blockquote class="blockquote">
-                  SimpleFood - одна из лучших служб доставки продуктов из
-                  ресторанов в городе. Очень удобный сайт и приложение. Их
-                  доставщики очень вежливы и пунктуальны. Компания часто
-                  проводит акции и дарит скидки на доставку - однозначно
-                  рекомендую!
+                <figure class="reviews__content">
+                  <img
+                    class="reviews__img"
+                    src="images/d.jpg"
+                    alt="фото Дарьи"
+                    width="300"
+                    height="300"
+                  />
 
-                  <span>Дарья</span>
-                  <p>Ценитель вкусной еды</p>
-                </blockquote>
-                </div>
-              </div>
+                  <blockquote class="blockquote">
+                   <p class="blockquote__text"> SimpleFood - одна из лучших служб доставки продуктов из
+                    ресторанов в городе. Очень удобный сайт и приложение. Их
+                    доставщики очень вежливы и пунктуальны. Компания часто
+                    проводит акции и дарит скидки на доставку - однозначно
+                    рекомендую!</p>
+
+                    
+                  </blockquote>
+                  <figcaption>
+                    Дарья
+                  <p>Ценитель вкусной еды</p> 
+                </figcaption>
+                </figure>
+              </li>
+              </ul>
+
+              <ul class="reviews__item">
+                <li class="reviews__list">
+                <figure class="reviews__content">
+                  <img
+                    class="reviews__img"
+                    src="images/d.jpg"
+                    alt="фото Дарьи"
+                    width="300"
+                    height="300"
+                  />
+
+                  <blockquote class="blockquote">
+                   <p class="blockquote__text"> SimpleFood - одна из лучших служб доставки продуктов из
+                    ресторанов в городе. Очень удобный сайт и приложение. Их
+                    доставщики очень вежливы и пунктуальны. Компания часто
+                    проводит акции и дарит скидки на доставку - однозначно
+                    рекомендую!</p>
+
+                    
+                  </blockquote>
+                   <figcaption class="figcaption">
+                    Дарья
+                  <p>Ценитель вкусной еды</p> 
+                </figcaption>
+                </figure>
+                </li>
+              </ul>
             </div>
           </div>
-        </div>
       </section>
 
       <section class="application">
         <div class="container">
           <div class="application__inner">
             <div class="application__content">
-              <h2 class="application__title title">Скачайте мобильное приложение</h2>
+              <h2 class="application__title title">
+                Скачайте мобильное приложение
+              </h2>
               <p class="application__text">
                 Рестораны, которые вы любите - в ваших руках. Устанавливайте
                 приложение и заказывайте еду в любом удобном месте.
               </p>
-               
-              <div class="application-info__link">
-              <a class="application__link" href="#">
-                <img
-                  class="application__img"
-                  src="../images/apple.svg"
-                  alt="ссылка на App store"
-                />
-              </a>
-              <a class="application-link" href="#">
-                <img
-                  class="application__img"
-                  src=" ../images/google.svg"
-                  alt="ссылка на "
-                />
-              </a>
+
+              <ul class="application-info">
+                <li class="application-info__list">
+                <a class="application__link" href="#">
+                  <img
+                    class="application--img"
+                    src="images/apple.svg"
+                    alt="ссылка на App store"
+                    width="120"
+                    height="40"
+                  />
+                </a>
+                </li>
+                <li class="application-info__list">
+                <a class="application-link" href="#">
+                  <img
+                    class="application--img"
+                    src="images/google.svg"
+                    alt="ссылка на Google play"
+                    width="135"
+                    height="40"
+                  />
+                </a>
+                </li>
+              </ul>
             </div>
-            </div>
-            <img class="application__img" src="images/app.jpg" alt="фото еды" />
+            <div class="application__img" style="background-image: url('images/app.jpg');"></div>
+            <!-- <img class="" src="" alt="фото еды" /> -->
           </div>
         </div>
       </section>
@@ -982,20 +1086,20 @@
         <div class="footer-top">
           <div class="footer-top__item">
             <a class="logo animation-logo footer__logo" href="#body">
-              <img class="logo__img" src="images/logo.svg" alt="logo" />
+              <img class="logo__img" src="images/logo.svg" alt="logo"  width="200" height="39"/>
             </a>
 
             <form class="form-subck" action="#">
-              <label class="sr-only" for="name">Форма</label>
+              <label class="sr-only" for="name">Подпишись на нас</label>
               <input
-               class="form-subck-input"
-               required
-               type="email"
-               placeholder="Ваш email"
+                class="form-subck-input"
+                required
+                type="email"
+                placeholder="Ваш email"
                 id="name"
-                name="input"
+                name="subscribe"
               />
-              <a class="form-subck-btn animation-btn" type="submit">
+              <button class="form-subck-btn animation-btn" type="submit">
                 <svg
                   width="17"
                   height="16"
@@ -1010,151 +1114,154 @@
                 </svg>
                 Подписаться
 
-                <span class="sr-only">кнопка</span>
-              </a>
+               
+              </button>
             </form>
           </div>
 
           <ul class="footer-top__list">
             <li class="footer-top__item">
-              <a class="footer-top__link" href="#"> Как это работает </a>
+              <a class="footer-top__link animation" href="#"> Как это работает </a>
             </li>
             <li class="footer-top__item">
-              <a class="footer-top__link" href="#"> Продукты </a>
+              <a class="footer-top__link animation" href="#"> Продукты </a>
             </li>
             <li class="footer-top__item">
-              <a class="footer-top__link" href="#"> Блюда </a>
+              <a class="footer-top__link animation" href="#"> Блюда </a>
             </li>
             <li class="footer-top__item">
-              <a class="footer-top__link" href="#"> Меню </a>
-            </li>
-
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="#"> О нас </a>
-            </li>
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="#"> Новости </a>
-            </li>
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="#"> Партнеры </a>
-            </li>
-            <li class="footer-top__item">
-              <a class="footer-top__link" href="#"> ЧаВо </a>
+              <a class="footer-top__link animation" href="#"> Меню </a>
             </li>
 
             <li class="footer-top__item">
-              <a class="footer-top__link" href="#"> Скачать приложение </a>
+              <a class="footer-top__link animation" href="#"> О нас </a>
             </li>
             <li class="footer-top__item">
-              <a class="footer-top__link" href="#"> Блог</a>
+              <a class="footer-top__link animation" href="#"> Новости </a>
             </li>
             <li class="footer-top__item">
-              <a class="footer-top__link" href="#"> Что нового? </a>
+              <a class="footer-top__link animation" href="#"> Партнеры </a>
             </li>
             <li class="footer-top__item">
-              <a class="footer-top__link" href="#"> Карта сайта </a>
+              <a class="footer-top__link animation" href="#"> ЧаВо </a>
+            </li>
+
+            <li class="footer-top__item">
+              <a class="footer-top__link animation" href="#"> Скачать приложение </a>
+            </li>
+            <li class="footer-top__item">
+              <a class="footer-top__link animation" href="#"> Блог</a>
+            </li>
+            <li class="footer-top__item">
+              <a class="footer-top__link animation" href="#"> Что нового? </a>
+            </li>
+            <li class="footer-top__item">
+              <a class="footer-top__link animation" href="#"> Карта сайта </a>
             </li>
           </ul>
 
           <address class="address">
-          <ul class="footer-top__item footer__footer">
-            <li class="footer__list">
-              <a class="footer-top__adress footer-top--a" href="#">
-                
-                ул. Т.Г.Шевченко, 1
-              </a>
-            </li>
-            <li class="footer__list">
-              <a class="footer-top__phone footer-top--b" href="tel:+380501112233">
-                
-
-                +380501112233
-              </a>
-            </li>
-            <li class="footer__list">
-              <a class="footer-top__email footer-top--c" href="mailto:support@sfood.com ">
-                
-
-                support@sfood.com
-              </a>
-            </li>
-
-            <ul class="social-list">
-              <li class="social-list-item">
-                <a
-                  class="social-list-link"
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <svg
-                    width="10"
-                    height="21"
-                    viewBox="0 0 10 21"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M2.54678 20.5263V10.8948H0V7.42695H2.54678V4.46499C2.54678 2.13745 4.05118 0 7.51762 0C8.92113 0 9.95896 0.13455 9.95896 0.13455L9.87718 3.3729C9.87718 3.3729 8.81876 3.3626 7.66377 3.3626C6.41371 3.3626 6.21344 3.93867 6.21344 4.89481V7.42695H9.97655L9.81281 10.8948H6.21344V20.5263H2.54678Z"
-                      fill="black"
-                    />
-                  </svg>
-                  <span class="sr-only">cсылка на фейсбук </span>
+            <ul class="footer-top__item">
+              <li class="footer__list animation">
+                <a class="footer-top__adress footer-top--a" href="#">
+                  ул. Т.Г.Шевченко, 1
                 </a>
               </li>
-              <li class="social-list-item">
+              <li class="footer__list animation">
                 <a
-                  class="social-list-link"
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  class="footer-top__phone footer-top--b"
+                  href="tel:+380501112233"
                 >
-                  <svg
-                    width="21"
-                    height="17"
-                    viewBox="0 0 21 17"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M20.5263 1.98086C19.7715 2.30648 18.95 2.54082 18.1039 2.6321C18.9824 2.11021 19.6402 1.28571 19.954 0.313295C19.1297 0.80367 18.2266 1.14753 17.2849 1.32962C16.8913 0.908848 16.4153 0.573641 15.8865 0.344888C15.3577 0.116135 14.7874 -0.00126247 14.2113 1.02382e-05C11.8802 1.02382e-05 10.0054 1.88959 10.0054 4.20839C10.0054 4.534 10.0448 4.85962 10.109 5.17291C6.61845 4.99036 3.50534 3.3228 1.43568 0.769655C1.05857 1.41378 0.86095 2.14718 0.863383 2.89358C0.863383 4.35393 1.60589 5.6416 2.73816 6.39891C2.0709 6.37263 1.41926 6.18923 0.836248 5.86362V5.91542C0.836248 7.9604 2.2818 9.6551 4.20838 10.0449C3.84664 10.1388 3.47452 10.1869 3.10078 10.1879C2.82696 10.1879 2.56795 10.1608 2.30647 10.1238C2.8393 11.7914 4.39092 13.0026 6.23856 13.042C4.79301 14.1743 2.98237 14.8403 1.01633 14.8403C0.663572 14.8403 0.337953 14.828 0 14.7885C1.86491 15.9849 4.07763 16.6756 6.46057 16.6756C14.1965 16.6756 18.4295 10.2669 18.4295 4.70422C18.4295 4.52167 18.4295 4.33913 18.4172 4.15658C19.2362 3.55715 19.954 2.81464 20.5263 1.98086Z"
-                      fill="black"
-                    />
-                  </svg>
-                  <span class="sr-only">ссылка на твиттер</span>
+                  +380501112233
                 </a>
               </li>
-              <li class="social-list-item">
+              <li class="footer__list animation">
                 <a
-                  class="social-list-link footer-top-item"
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  class="footer-top__email footer-top--c"
+                  href="mailto:support@sfood.com "
                 >
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M9.74756 6.49862C7.95723 6.49862 6.49618 7.95967 6.49618 9.75C6.49618 11.5403 7.95723 13.0014 9.74756 13.0014C11.5379 13.0014 12.9989 11.5403 12.9989 9.75C12.9989 7.95967 11.5379 6.49862 9.74756 6.49862ZM19.4993 9.75C19.4993 8.40359 19.5115 7.06938 19.4359 5.72541C19.3602 4.16435 19.0041 2.77891 17.8626 1.63739C16.7186 0.493433 15.3356 0.139757 13.7746 0.0641433C12.4282 -0.0114703 11.094 0.00072551 9.75 0.00072551C8.40359 0.00072551 7.06938 -0.0114703 5.72541 0.0641433C4.16435 0.139757 2.77892 0.495872 1.63739 1.63739C0.493433 2.78135 0.139757 4.16435 0.0641433 5.72541C-0.0114703 7.07182 0.00072551 8.40603 0.00072551 9.75C0.00072551 11.094 -0.0114703 12.4306 0.0641433 13.7746C0.139757 15.3356 0.495873 16.7211 1.63739 17.8626C2.78135 19.0066 4.16435 19.3602 5.72541 19.4359C7.07182 19.5115 8.40603 19.4993 9.75 19.4993C11.0964 19.4993 12.4306 19.5115 13.7746 19.4359C15.3356 19.3602 16.7211 19.0041 17.8626 17.8626C19.0066 16.7186 19.3602 15.3356 19.4359 13.7746C19.5139 12.4306 19.4993 11.0964 19.4993 9.75ZM9.74756 14.7527C6.97913 14.7527 4.74487 12.5184 4.74487 9.75C4.74487 6.98157 6.97913 4.74731 9.74756 4.74731C12.516 4.74731 14.7503 6.98157 14.7503 9.75C14.7503 12.5184 12.516 14.7527 9.74756 14.7527ZM14.9551 5.71077C14.3088 5.71077 13.7868 5.18879 13.7868 4.54242C13.7868 3.89604 14.3088 3.37407 14.9551 3.37407C15.6015 3.37407 16.1235 3.89604 16.1235 4.54242C16.1237 4.6959 16.0936 4.84792 16.035 4.98976C15.9763 5.13159 15.8903 5.26047 15.7817 5.369C15.6732 5.47753 15.5443 5.56358 15.4025 5.62223C15.2606 5.68087 15.1086 5.71096 14.9551 5.71077Z"
-                      fill="black"
-                    />
-                  </svg>
-                  <span class="sr-only">ссылка инстаграм</span>
+                  support@sfood.com
                 </a>
               </li>
+
+              <ul class="social-list">
+                <li class="social-list-item">
+                  <a
+                    class="social-list-link"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <svg
+                      width="10"
+                      height="21"
+                      viewBox="0 0 10 21"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M2.54678 20.5263V10.8948H0V7.42695H2.54678V4.46499C2.54678 2.13745 4.05118 0 7.51762 0C8.92113 0 9.95896 0.13455 9.95896 0.13455L9.87718 3.3729C9.87718 3.3729 8.81876 3.3626 7.66377 3.3626C6.41371 3.3626 6.21344 3.93867 6.21344 4.89481V7.42695H9.97655L9.81281 10.8948H6.21344V20.5263H2.54678Z"
+                        fill="black"
+                      />
+                    </svg>
+                    <span class="sr-only">cсылка на фейсбук </span>
+                  </a>
+                </li>
+                <li class="social-list-item">
+                  <a
+                    class="social-list-link"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <svg
+                      width="21"
+                      height="17"
+                      viewBox="0 0 21 17"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M20.5263 1.98086C19.7715 2.30648 18.95 2.54082 18.1039 2.6321C18.9824 2.11021 19.6402 1.28571 19.954 0.313295C19.1297 0.80367 18.2266 1.14753 17.2849 1.32962C16.8913 0.908848 16.4153 0.573641 15.8865 0.344888C15.3577 0.116135 14.7874 -0.00126247 14.2113 1.02382e-05C11.8802 1.02382e-05 10.0054 1.88959 10.0054 4.20839C10.0054 4.534 10.0448 4.85962 10.109 5.17291C6.61845 4.99036 3.50534 3.3228 1.43568 0.769655C1.05857 1.41378 0.86095 2.14718 0.863383 2.89358C0.863383 4.35393 1.60589 5.6416 2.73816 6.39891C2.0709 6.37263 1.41926 6.18923 0.836248 5.86362V5.91542C0.836248 7.9604 2.2818 9.6551 4.20838 10.0449C3.84664 10.1388 3.47452 10.1869 3.10078 10.1879C2.82696 10.1879 2.56795 10.1608 2.30647 10.1238C2.8393 11.7914 4.39092 13.0026 6.23856 13.042C4.79301 14.1743 2.98237 14.8403 1.01633 14.8403C0.663572 14.8403 0.337953 14.828 0 14.7885C1.86491 15.9849 4.07763 16.6756 6.46057 16.6756C14.1965 16.6756 18.4295 10.2669 18.4295 4.70422C18.4295 4.52167 18.4295 4.33913 18.4172 4.15658C19.2362 3.55715 19.954 2.81464 20.5263 1.98086Z"
+                        fill="black"
+                      />
+                    </svg>
+                    <span class="sr-only">ссылка на твиттер</span>
+                  </a>
+                </li>
+                <li class="social-list-item">
+                  <a
+                    class="social-list-link footer-top-item"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.74756 6.49862C7.95723 6.49862 6.49618 7.95967 6.49618 9.75C6.49618 11.5403 7.95723 13.0014 9.74756 13.0014C11.5379 13.0014 12.9989 11.5403 12.9989 9.75C12.9989 7.95967 11.5379 6.49862 9.74756 6.49862ZM19.4993 9.75C19.4993 8.40359 19.5115 7.06938 19.4359 5.72541C19.3602 4.16435 19.0041 2.77891 17.8626 1.63739C16.7186 0.493433 15.3356 0.139757 13.7746 0.0641433C12.4282 -0.0114703 11.094 0.00072551 9.75 0.00072551C8.40359 0.00072551 7.06938 -0.0114703 5.72541 0.0641433C4.16435 0.139757 2.77892 0.495872 1.63739 1.63739C0.493433 2.78135 0.139757 4.16435 0.0641433 5.72541C-0.0114703 7.07182 0.00072551 8.40603 0.00072551 9.75C0.00072551 11.094 -0.0114703 12.4306 0.0641433 13.7746C0.139757 15.3356 0.495873 16.7211 1.63739 17.8626C2.78135 19.0066 4.16435 19.3602 5.72541 19.4359C7.07182 19.5115 8.40603 19.4993 9.75 19.4993C11.0964 19.4993 12.4306 19.5115 13.7746 19.4359C15.3356 19.3602 16.7211 19.0041 17.8626 17.8626C19.0066 16.7186 19.3602 15.3356 19.4359 13.7746C19.5139 12.4306 19.4993 11.0964 19.4993 9.75ZM9.74756 14.7527C6.97913 14.7527 4.74487 12.5184 4.74487 9.75C4.74487 6.98157 6.97913 4.74731 9.74756 4.74731C12.516 4.74731 14.7503 6.98157 14.7503 9.75C14.7503 12.5184 12.516 14.7527 9.74756 14.7527ZM14.9551 5.71077C14.3088 5.71077 13.7868 5.18879 13.7868 4.54242C13.7868 3.89604 14.3088 3.37407 14.9551 3.37407C15.6015 3.37407 16.1235 3.89604 16.1235 4.54242C16.1237 4.6959 16.0936 4.84792 16.035 4.98976C15.9763 5.13159 15.8903 5.26047 15.7817 5.369C15.6732 5.47753 15.5443 5.56358 15.4025 5.62223C15.2606 5.68087 15.1086 5.71096 14.9551 5.71077Z"
+                        fill="black"
+                      />
+                    </svg>
+                    <span class="sr-only">ссылка инстаграм</span>
+                  </a>
+                </li>
+              </ul>
             </ul>
-          </ul>
           </address>
         </div>
 
-        <div class="footer-bottom">
+        
+      </div>
+
+      <div class="footer-bottom">
           <p class="footer-bottom__copy">© 2022 Simple Food</p>
         </div>
-      </div>
     </footer>
     <script src="js/main.min.js"></script>
   </body>

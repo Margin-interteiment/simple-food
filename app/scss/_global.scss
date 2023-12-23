@@ -37,12 +37,15 @@ body {
   overflow: hidden;
 }
 
-section {
+.section {
   padding: 60px 0;
 }
 
 .title {
   color: #363853;
   font-size: 36px;
-  margin-bottom: 60px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  // margin-bottom: 60px;
 }

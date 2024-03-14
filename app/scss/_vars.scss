@@ -4,8 +4,13 @@ $gray: #c2c2c2;
 $darkBlue-900: #363853;
 $dark: #31352b;
 $silver-100: #f9faff;
-$white:#fff;
-$gray1:#c2c2c2;
+$white: #fff;
+$gray1: #c2c2c2;
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
 
 %rubik-300 {
   font-family: "Rubik", sans-serif;
@@ -22,19 +27,16 @@ $gray1:#c2c2c2;
   font-weight: 500;
 }
 
-%rubic{
-   font-family: "Rubic", italic;
+%rubic {
+  font-family: "Rubic", italic;
   font-weight: 400;
 }
 
-
 %checkbox-hidden,
- %radio-hidden{
+%radio-hidden {
   width: 1px;
   height: 1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
   position: absolute;
 }
-
-

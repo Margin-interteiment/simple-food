@@ -216,7 +216,10 @@
                   src="images/burger-slide.jpg"
                   alt="фото бургера"
                   
+                
 />
+
+                <span class="sr-only">фото бургера</span>
               </div>
 
               <div class="burger-one__slide-content">
@@ -226,6 +229,7 @@
                   alt="фото бургера"
                   data-modal="#burgermenu"
 />
+                <span class="sr-only">фото бургера</span>
               </div>
 
               <div class="burger-one__slide-content">
@@ -235,6 +239,8 @@
                   alt="фото бургера"
                   data-modal="#burgermenu"
 />
+
+                <span class="sr-only">фото бургера</span>
               </div>
             </div>
 
@@ -274,7 +280,7 @@
                       </defs>
                     </svg>
                   </button>
-                  <input type="number" min="0" max="10" value="1" readonly/>
+                  <input type="number" min="0" max="10" value="1" readonly name="input"/>
                   <button
                     class="number-plus"
                     type="button"
@@ -532,6 +538,7 @@
                             class="comments-form__text-input"
                             placeholder="Введите ваше имя"
                             type="text"
+                            name="input"
                             required
 />
                         </label>
@@ -544,6 +551,7 @@
                             class="comments-form__text-input"
                             placeholder="youremail@mail.com"
                             type="text"
+                            name="input"
                             required
 />
                         </label>
@@ -555,6 +563,7 @@
                     <input
                       class="comments-form__future-input"
                       type="checkbox"
+                      name="input"
 />
 
                     <p class="comments-form__future-text">
@@ -593,7 +602,7 @@
                       Чизбургер с листьями салата
                     </h3>
                     <span class="product__span">160 <span>грн.</span></span>
-                    <button class="product-card-btn">В корзину</button>
+                    <button class="product-card-btn" type="submit">В корзину</button>
                   </article>
                 </li>
               </ul>
@@ -610,7 +619,7 @@
                     <h3 class="product-card-subtitle">Бифбургер</h3>
                     <span class="product__span">190 <span>грн.</span>
                     </span>
-                    <button class="product-card-btn">В корзину</button>
+                    <button class="product-card-btn"type="submit">В корзину</button>
                   </article>
                 </li>
               </ul>
@@ -627,7 +636,7 @@
                     <h3 class="product-card-subtitle">Королевский чизбургер</h3>
                     <span class="product__span">260 <span>грн.</span>
                     </span>
-                    <button class="product-card-btn">В корзину</button>
+                    <button class="product-card-btn"type="submit">В корзину</button>
                   </article>
                 </li>
               </ul>
@@ -644,7 +653,7 @@
                     <h3 class="product-card-subtitle">Черный гамбургер</h3>
                     <span class="product__span">199 <span>грн.</span>
                     </span>
-                    <button class="product-card-btn">В корзину</button>
+                    <button class="product-card-btn" type="submit">В корзину</button>
                   </article>
                 </li>
               </ul>
@@ -660,7 +669,7 @@
 />
                     <h3 class="product-card-subtitle">Чикен бургер</h3>
                     <span class="product__span">180 <span>грн.</span></span>
-                    <button class="product-card-btn">В корзину</button>
+                    <button class="product-card-btn" type="submit">В корзину</button>
                   </article>
                 </li>
               </ul>
@@ -865,6 +874,7 @@
         <img
             src="images/icons-svg/close-burger.svg"
             alt="кнопка для закрытия"
+
 />
       </button>
 

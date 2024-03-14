@@ -15,7 +15,6 @@ $(function () {
   });
 
   $(".filter-price__input").ionRangeSlider({
-    // skin: "modern",
     type: "double",
     onStart: function (data) {
       $(".filter-price__from").text(data.from);
@@ -103,40 +102,6 @@ modalClose.on("click", function (event) {
   modalParent.removeClass("show");
   $("body").removeClass("no-scroll");
 });
-
-// $(".modal-window__content").slick({
-//   // infinite: true,
-//   arrows: true,
-//   dots: true,
-//   slidesToShow: 3,
-//   slidesToScroll: 3,
-// });
-
-// let timer = null;
-// let slider = document.querySelector("#slider"),
-//   slides = slider.querySelectorAll(".slide_item"),
-//   len = slides.length,
-//   index = len - 1,
-//   dir = 1;
-
-// function move() {
-//   slides[index].style.opacity = "";
-//   slides[index].style.Zindex = "";
-//   index = (index + dir + len) % len;
-//   slides[index].style.opacity = 1;
-//   slides[index].style.Zindex = 1;
-//   timer = window.setTimeout(move, 2000);
-// }
-
-// function show(state) {
-//   if (state === "block") {
-//     timer = window.setTimeout(move, 1000);
-//   } else {
-//     clearTimeout(timer);
-//   }
-//   document.getElementById("window9").style.display = state;
-//   document.getElementById("wrap9").style.display = state;
-// }
 
 $(".product-tabs__top-item").on("click", function (e) {
   e.preventDefault();
